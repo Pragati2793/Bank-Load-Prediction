@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><strong>BANK LOAN STATUS PREDICTOR</strong>></title>
+</head>>
+<body>
+    <h1>BANK LOAN STATUS PREDICTOR</h1>
+    {% if result %}
+        <p>{{result}}</p>
+    {% endif %}
+    <form method="post",action="/predict">
+        <div class="row">
+            <label><strong>Gender</strong></label>
+            <select name="Gender" id="Gender" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <label><strong>Married</strong></label>
+            <select name="Married" id="Married" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <label><strong>Education</strong></label>
+            <select name="Education" id="Education" required="required">
+                <option value="Graduate">Graduate</option>
+                <option value="Not Graduate">Not Graduate</option>
+            </select>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <label><strong>Self_Employed</strong></label>
+            <select name="Self_Employed" id="Self_Employed" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <label><strong>Property_Area</strong></label>
+            <select name="Property_Area" id="Property_Area" required="required">
+                <option value="Rural">Rural</option>
+                <option value="Semiurban">Semiurban</option>
+                <option value="Urban">Urban</option>
+            </select>
+        </div>
+        <br><br>
+        <label><strong>Dependents</strong></label><br>
+        <input type="text" name="Dependents"><br><br>
+
+        <label><strong>ApplicantIncome</strong></label><br>
+        <input type="text" name="ApplicantIncome"><br><br>
+
+        <label><strong>CoapplicantIncome</strong></label><br>
+        <input type="text" name="CoapplicantIncome"><br><br>
+
+        <label><strong>LoanAmount</strong></label><br>
+        <input type="text" name="LoanAmount"><br><br>
+
+        <label><strong>Loan_Amount_Term</strong></label><br>
+        <input type="text" name="Loan_Amount_Term"><br><br>
+
+        <label><strong>Credit_History</strong></label><br>
+        <input type="text" name="Credit_History"><br><br>
+        <input type="submit" value="Predict"><br><br>
+        <input type="reset" value="reset"><br><br>
+    </form>
+
+</body>
+</html>

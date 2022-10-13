@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><strong>PREDICTOR CUSTOMER CHURNING</strong>></title>
+</head>
+<body>
+
+    <h1>PREDICTOR CUSTOMER CHURNING</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label><strong>CreditScore</strong></label><br>
+        <input type="text" name="CreditScore"><br><br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Geography -->
+                        <h5 class="card-title"><strong>Geography</strong>></h5>
+                        <select name="Geography" id="Geography" required="required">
+                            <option value="France">France</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Germany">Germany</option>
+                        </select>
+                    </div>
+                </div>
+            </div><br><br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Gender -->
+                            <h5 class="card-title"><strong>Gender</strong></h5>
+                            <select name="Gender" id="Gender" required="required">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+        <label><strong>Age</strong></label><br>
+        <input type="text" name="Age"><br><br>
+
+        <label><strong>Tenure</strong></label><br>
+        <input type="text" name="Tenure"><br><br>
+
+        <label><strong>Balance</strong></label><br>
+        <input type="text" name="Balance"><br><br>
+
+        <label><strong>NumOfProducts</strong></label><br>
+        <input type="text" name="NumOfProducts"><br><br>
+
+        <label><strong>HasCrCard</strong></label><br>
+        <input type="text" name="HasCrCard"><br><br>
+
+        <label><strong>IsActiveMember</strong></label><br>
+        <input type="text" name="IsActiveMember"><br><br>
+
+        <label><strong>EstimatedSalary</label><br>
+        <input type="text" name="EstimatedSalary"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+        <input type="reset" value="reset"><br><br>
+    </form>
+
+</body>
+</html>

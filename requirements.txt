@@ -1,0 +1,8 @@
+pickle
+pandas
+numpy
+seaborn
+matplotlib.pyplot
+svm
+sklearn
+metrics
